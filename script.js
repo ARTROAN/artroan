@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	$(window).resize(function () {
-		$('.page-1 .tiles-group').css('transform', 'scale('+$('body').height()/780+')');
+		$('.page-1 .tiles-group').css('transform', 'scale('+$('#tiles-region').height()/600+')');
 	}).resize();
 
 	$('.nav-right').hover(function () {
