@@ -11,30 +11,78 @@ body {
 	color: rgba(0,0,0,0.33);
 }
 
-.container {
-	max-width: 800px;
+.header,
+.container
+{
+	max-width: 500px;
 	width: calc(100% - 100px);
-	height: 100%;
-	top: 50px;
 	left: 50%;
 	transform: translate(-50%, 0);
-	position: absolute;
+}
+
+.header {
+	height: 50px;
+	position: fixed;
+	z-index: 2;
+	top: 50px;
 }
 
 .logo {
 	height: 25px;
 	opacity: 0.33;
-	margin-left: 15px;
+	margin-left: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.logo.line {
+	opacity: 0;
+}
+
+.icon {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	right: 0;
+	top: -10px;
+}
+
+.icon.flat,
+.icon.line.white
+{
+	opacity: 0;
+}
+
+.header:hover .icon.flat {
+	opacity: 1;
+}
+
+.breakpoint .logo {
+	opacity: 0;
+}
+
+.breakpoint .logo.line {
+	opacity: 1;
+}
+
+.breakpoint .icon.line {
+	opacity: 0;
+}
+
+.breakpoint .icon.line.white {
+	opacity: 1;
+}
+
+.container {
+	height: 100%;
+	top: 100px;
+	position: absolute;
 }
 
 .section {
 	width: 100%;
 	display: flex;
-}
-
-.section.header {
-	width: 100%;
-	height: 50px;
 }
 
 .section.info {
@@ -62,28 +110,64 @@ body {
 }
 
 .tile {
-	background: red;
+	background-color: blue;
+	background-image: url('https://68.media.tumblr.com/6ebbfaff5af4a61b043c970b46186206/tumblr_olom96wQBV1w1rpjto4_1280.png');
+	background-size: cover;
+	background-position: center;
 	flex: 1 1 auto !important;
 	margin: 0 10px 10px 0;
+	position: relative;
+	color: rgba(0,0,0,0);
 }
 
 .tile:last-child {
 	margin-right :0;
 }
 
+.tile::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background: rgba(0,0,0,0.33);
+}
+
+.tile:hover::after {
+	opacity: 1;
+}
+
 .margin-right {
 	margin-right: 10px;
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 720px) {
 	.half-height,
 	.full-height
 	{
 		height: unset;
 	}
 
+	.header,
+	.container
+	{
+		max-width: 720px;
+		width: calc(100% - 200px);
+	}
+
+	.header {
+		top: 75px;
+	}
+
+	.icon {
+		left: -70px;
+	}
+
 	.container {
-		height: calc(100% - 100px);
+		height: calc(100% - 250px);
+		margin-top: 50px;
 		display: flex;
 		flex-direction: column;
 	}
@@ -98,8 +182,8 @@ body {
 
 	.section.break {
 		position: absolute;
-		top: 50px;
+		top: 0;
 		right: 0;
-		height: calc(100% - 50px);
+		height: 100%;
 	}
 }
