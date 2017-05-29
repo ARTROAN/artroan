@@ -167,6 +167,29 @@ body {
 	margin-right: 10px;
 }
 
+.tile-inner {
+	position: absolute;
+	opacity: 0;
+	z-index: 3;
+	width: 100%;
+	top: 50%;
+	left: 0;
+	transform: translate(0, -50%);
+	color: white;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+}
+
+img.tile-inner {
+	width: calc(100% - 20px);
+	left: 10px;
+}
+
+.tile:hover .tile-inner {
+	opacity: 1;
+}
+
 @media screen and (min-width: 720px) {
 	.half-height,
 	.full-height
