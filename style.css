@@ -211,3 +211,12 @@ body {
 		height: 100%;
 	}
 }
+
+@media screen and (min-width: 1400px) {
+	.header,
+	.container
+	{
+		max-width: 1080px;
+		width: calc(100% - 200px) !important;
+	}
+}
