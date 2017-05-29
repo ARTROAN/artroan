@@ -7,10 +7,6 @@ $(document).ready(function() {
 
 	setHeightBreakpoint();
 
-	$(window).resize(function () {
-		setHeightBreakpoint();
-	});
-
 	function setLineColor() {
 		if($(window).scrollTop() > heightBreakpoint) {
 			$('.header').addClass('breakpoint');
@@ -25,4 +21,23 @@ $(document).ready(function() {
 	$(window).scroll(function() {
 		setLineColor();
 	});
+
+	function setRect2x1() {
+		$('.rect-2x1').each(function () {
+			$(this).height($(this).width() / 2)
+		});
+	}
+
+	setRect2x1();
+
+	$(window).resize(function () {
+		setHeightBreakpoint();
+		setRect2x1();
+	});
+
+	//hide loader
+
+	setTimeout(function() {
+		$('.loader').remove();
+	}, 500)
 });
