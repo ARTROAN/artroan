@@ -39,5 +39,8 @@ $(document).ready(function() {
 
 	setTimeout(function() {
 		$('.loader').remove();
-	}, 500)
+		$('.section').each(function() {
+			$(this).css('opacity', '1');
+		})
+	}, 500);
 });
