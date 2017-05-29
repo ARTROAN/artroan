@@ -34,7 +34,7 @@ body {
 .container
 {
 	max-width: 500px;
-	width: calc(100% - 100px);
+	width: calc(100% - 100px) !important;
 	left: 50%;
 	transform: translate(-50%, 0);
 }
@@ -177,7 +177,7 @@ body {
 	.container
 	{
 		max-width: 720px;
-		width: calc(100% - 200px);
+		width: calc(100% - 200px) !important;
 	}
 
 	.header {
