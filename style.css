@@ -216,7 +216,7 @@ body {
 	.header,
 	.container
 	{
-		max-width: 1080px;
+		max-width: 810px;
 		width: calc(100% - 200px) !important;
 	}
 }
