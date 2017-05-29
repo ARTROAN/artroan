@@ -131,7 +131,6 @@ body {
 
 .tile {
 	background-color: blue;
-	background-image: url('https://68.media.tumblr.com/6ebbfaff5af4a61b043c970b46186206/tumblr_olom96wQBV1w1rpjto4_1280.png');
 	background-size: cover;
 	background-position: center;
 	flex: 1 1 auto !important;
@@ -192,6 +191,34 @@ img.tile-inner {
 .tile:hover .tile-inner {
 	opacity: 1;
 	transform: translate(-50%, -50%);
+}
+
+.tile-lander {
+	background-image: url('images/tile-lander.jpg');
+}
+
+.tile-portfolio {
+	background-image: url('images/tile-portfolio.jpg');
+}
+
+.tile-friction {
+	background-image: url('images/tile-friction.jpg');
+}
+
+.tile-upcoming {
+	background-image: url('images/tile-upcoming.jpg');
+}
+
+.tile-shop {
+	background-image: url('images/tile-shop.jpg');
+}
+
+.tile-patreon {
+	background-image: url('images/tile-patreon.jpg');
+}
+
+.tile-ko-fi {
+	background-image: url('images/tile-ko-fi.jpg');
 }
 
 @media screen and (min-width: 720px) {
