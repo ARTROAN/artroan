@@ -157,6 +157,7 @@ body {
 	height: 100%;
 	opacity: 0;
 	background: rgba(0,0,0,0.33);
+	transition: opacity 0.2s;
 }
 
 .tile:hover::after {
@@ -174,11 +175,12 @@ body {
 	width: 100%;
 	top: 50%;
 	left: 0;
-	transform: translate(0, -50%);
+	transform: translate(0, calc(-50px - 50%));
 	color: white;
 	text-transform: uppercase;
 	font-family: 'Montserrat', sans-serif;
 	text-align: center;
+	transition: opacity 0.2s, transform 0.2s;
 }
 
 img.tile-inner {
@@ -188,6 +190,7 @@ img.tile-inner {
 
 .tile:hover .tile-inner {
 	opacity: 1;
+	transform: translate(0, -50%);
 }
 
 @media screen and (min-width: 720px) {
