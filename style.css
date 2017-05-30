@@ -29,6 +29,12 @@ body {
 	transform: translate(-50%, -50%);
 }
 
+.loading .header,
+.loading .container
+{
+	opacity: 0;
+}
+
 .header,
 .container
 {
@@ -36,6 +42,8 @@ body {
 	width: calc(100% - 100px) !important;
 	left: 50%;
 	transform: translate(-50%, 0);
+	opacity: 1;
+	transition: opacity 0.2s;
 }
 
 .header {
@@ -101,7 +109,6 @@ body {
 .section {
 	width: 100%;
 	display: flex;
-	opacity: 0;
 	transition: opacity 0.1s;
 }
 
