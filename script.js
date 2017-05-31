@@ -1,6 +1,12 @@
 $(document).ready(function() {
 	var heightBreakpoint;
 
+	function setMainWidth() {
+		$('.header, .container').css('max-width', $('.container').height() * 4 / 3 +'px');
+	}
+
+	setMainWidth();
+
 	function setHeightBreakpoint() {
 		heightBreakpoint = $('.break').offset().top - 65;
 	}
@@ -31,6 +37,7 @@ $(document).ready(function() {
 	setRect2x1();
 
 	$(window).resize(function () {
+		setMainWidth();
 		setHeightBreakpoint();
 		setRect2x1();
 	});
