@@ -212,12 +212,10 @@ img.tile-inner {
 
 .tile-shop {
 	background-image: url('images/tile-shop.jpg');
-	background-size: 150%;
 }
 
 .tile-patreon {
 	background-image: url('images/tile-patreon.jpg');
-	background-size: 130%;
 	background-position: 50% 70%;
 }
 
