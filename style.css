@@ -177,12 +177,11 @@ body {
 
 .tile-inner {
 	position: absolute;
-	opacity: 0;
 	z-index: 3;
 	width: 100%;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, calc(-50px - 50%));
+	transform: translate(-50%, -50%);
 	color: white;
 	text-transform: uppercase;
 	font-family: 'Montserrat', sans-serif;
@@ -193,11 +192,6 @@ body {
 img.tile-inner {
 	width: calc(100% - 20px);
 	max-width: 100px;
-}
-
-.tile:hover .tile-inner {
-	opacity: 1;
-	transform: translate(-50%, -50%);
 }
 
 .tile-lander {
@@ -273,5 +267,15 @@ img.tile-inner {
 		top: 0;
 		right: 0;
 		height: 100%;
+	}
+
+	.tile-inner {
+		opacity: 0;
+		transform: translate(-50%, calc(-50px - 50%));
+	}
+
+	.tile:hover .tile-inner {
+		opacity: 1;
+		transform: translate(-50%, -50%);
 	}
 }
