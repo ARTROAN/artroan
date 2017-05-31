@@ -125,11 +125,11 @@ body {
 }
 
 .half-height {
-	height: 50%;
+	height: 300px;
 }
 
 .full-height {
-	height: 80%;
+	height: 600px;
 }
 
 .vertical {
@@ -245,7 +245,24 @@ img.tile-inner {
 		left: -70px;
 	}
 
+	.breakpoint .logo {
+	opacity: 0.33;
+	}
+
+	.breakpoint .logo.line {
+		opacity: 0;
+	}
+
+	.breakpoint .icon.line {
+		opacity: 1;
+	}
+
+	.breakpoint .icon.line.white {
+		opacity: 0;
+	}
+
 	.container {
+		min-height: 500px;
 		height: calc(100% - 250px);
 		margin-top: 50px;
 		display: flex;
