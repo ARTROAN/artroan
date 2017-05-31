@@ -2,7 +2,7 @@ $(document).ready(function() {
 	var heightBreakpoint;
 
 	function setMainWidth() {
-		$('.header, .container').css('max-width', $('.container').height() * 4 / 3 +'px');
+		$('.header, .container').css('max-width', $('.container').height() * 8 / 7 +'px');
 	}
 
 	setMainWidth();
