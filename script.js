@@ -2,7 +2,7 @@ $(document).ready(function() {
 	var heightBreakpoint;
 
 	function setMainWidth() {
-		$('.header, .container').css('max-width', $('.container').height() * 8 / 7 +'px');
+		$('.header, .container, .page').css('max-width', $('.container').height() * 8 / 7 +'px');
 	}
 
 	setMainWidth();
@@ -40,6 +40,11 @@ $(document).ready(function() {
 		setMainWidth();
 		setHeightBreakpoint();
 		setRect2x1();
+	});
+
+	$('.tile-portfolio').click(function() {
+		$('.header, .container').css('opacity', '0');
+		$('.page.portfolio').show();
 	});
 
 	//hide loader
