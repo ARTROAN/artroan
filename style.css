@@ -102,9 +102,9 @@ body {
 }
 
 .container {
-	height: 100%;
 	top: 100px;
 	position: absolute;
+	margin-bottom: 50px;
 }
 
 .section {
@@ -216,6 +216,7 @@ body {
 	color: white;
 	text-transform: uppercase;
 	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
 	transition: opacity 0.2s, transform 0.2s;
 	text-align: center;
 }
@@ -261,15 +262,17 @@ img.inline-image-letter {
 }
 
 .page {
-	position: fixed;
-	height: calc(100% - 300px);
+	position: absolute;
 	top: 200px;
-	background: linear-gradient(#dc3f51, #ffbe66);
-	font-family: 'Montserrat', sans-serif;
-	text-transform: uppercase;
-	color: white;
+	color: rgba(255,255,255,0.67);
 	text-align: center;
 	display: none;
+	margin-bottom: 50px;
+	padding: 50px;
+}
+
+.page a {
+	text-decoration: none;
 }
 
 .page::before {
@@ -283,7 +286,7 @@ img.inline-image-letter {
 	height: 0;
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
-	border-bottom: 20px solid #dc3f51;
+	border-bottom: 20px solid;
 }
 
 .page-icon {
@@ -293,6 +296,100 @@ img.inline-image-letter {
 	top: -130px;
 	left: 50%;
 	transform: translate(-50%, 0);
+}
+
+.close-x {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	top: -100px;
+	right: 0;
+	transform: rotate(45deg);
+}
+
+.close-x::before,
+.close-x::after
+{
+	content: '';
+	position: absolute;
+}
+
+.close-x::before {
+	top: 0;
+	left: 50%;
+	width: 1.5px;
+	height: 100%;
+}
+
+.close-x::after {
+	left: 0;
+	top: 50%;
+	height: 1.5px;
+	width: 100%;
+}
+
+.close-x:hover {
+	opacity: 0.8;
+}
+
+.page .title {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 200;
+	font-size: 28px;
+	color: white;
+}
+
+.page .title img {
+	height: 40px;
+}
+
+.accent {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.lander {
+	background: linear-gradient(#45aaff, #2d74ff);
+}
+
+.lander::before {
+	border-bottom-color: #45aaff;
+}
+
+.lander .close-x::before,
+.lander .close-x::after
+{
+	background: #45aaff;
+}
+
+.lander a {
+	color: white;
+}
+
+.portfolio {
+	background: linear-gradient(#dc3f51, #ffbe66);
+	height: calc(100% - 300px);
+}
+
+.portfolio::before {
+	border-bottom-color: #dc3f51;
+}
+
+.portfolio .close-x::before,
+.portfolio .close-x::after
+{
+	background: #dc3f51;
+}
+
+.portfolio .center-center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
 }
 
 @media screen and (min-width: 720px) {
@@ -372,5 +469,23 @@ img.inline-image-letter {
 	.tile:hover .tile-inner {
 		opacity: 1;
 		transform: translate(-50%, -50%);
+	}
+
+	.page {
+		margin-bottom: 100px;
+	}
+
+	.page .title {
+		position: absolute;
+		top: -100px;
+		left: 0;
+	}
+
+	.lander .title {
+		color: #45aaff;
+	}
+
+	.portfolio .title {
+		color: #dc3f51;
 	}
 }

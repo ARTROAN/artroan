@@ -42,8 +42,18 @@ $(document).ready(function() {
 		setRect2x1();
 	});
 
+	$('.close-x').click(function() {
+		$('.page').hide();
+		$('.header, .container').show();
+	});
+
+	$('.tile-lander').click(function() {
+		$('.header, .container').hide();
+		$('.page.lander').show();
+	});
+
 	$('.tile-portfolio').click(function() {
-		$('.header, .container').css('opacity', '0');
+		$('.header, .container').hide();
 		$('.page.portfolio').show();
 	});
 
