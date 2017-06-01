@@ -225,6 +225,12 @@ img.tile-inner {
 	max-width: 100px;
 }
 
+img.inline-image-letter {
+	display: inline;
+	height: 1.2em;
+	vertical-align: top;
+}
+
 .tile-lander {
 	background-image: url('images/tile-lander.jpg');
 }
