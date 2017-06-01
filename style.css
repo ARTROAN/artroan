@@ -352,35 +352,45 @@ img.inline-image-letter {
 }
 
 .lander {
-	background: linear-gradient(#32dfff, #3381ff);
+	background: linear-gradient(#3381ff, #32dfff);
 }
 
 .lander::before {
-	border-bottom-color: #32dfff;
+	border-bottom-color: #3381ff;
 }
 
 .lander .close-x::before,
 .lander .close-x::after
 {
-	background: #32dfff;
+	background: #3381ff;
 }
 
 .lander a {
 	color: white;
 }
 
-.lander .page-image {
+.lander .page-images,
+.lander .page-labels
+{
 	width: calc(100% + 80px);
 	margin-left: -40px;
 }
 
+.lander .page-image {
+	width: 50%;
+	display: inline;
+}
+
 .lander .page-label {
 	font-size: 0.8em;
+	text-align: center;
+	display: inline;
 }
 
 .portfolio {
 	background: linear-gradient(#dc3f51, #ffbe66);
 	height: calc(100% - 300px);
+	min-height: 200px;
 }
 
 .portfolio::before {
@@ -493,7 +503,7 @@ img.inline-image-letter {
 	}
 
 	.lander .title {
-		color: #32dfff;
+		color: #3381ff;
 	}
 
 	.lander .title img {
