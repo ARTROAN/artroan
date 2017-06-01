@@ -171,7 +171,6 @@ body {
 	margin: 0 10px 10px 0;
 	position: relative;
 	color: rgba(0,0,0,0);
-	overflow: hidden;
 }
 
 .tile.rect-2x1 {
@@ -192,6 +191,7 @@ body {
 	opacity: 0;
 	background: rgba(0,0,0,0.33);
 	transition: opacity 0.2s;
+	overflow: hidden;
 }
 
 .tile:hover {
@@ -242,6 +242,16 @@ img.inline-image-letter {
 
 .tile-friction {
 	background-image: url('images/tile-friction.jpg');
+	overflow: unset;
+}
+
+.overflow-hidden-inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }
 
 .tile-upcoming {
@@ -259,6 +269,36 @@ img.inline-image-letter {
 
 .tile-ko-fi {
 	background-image: url('images/tile-ko-fi.jpg');
+}
+
+.hot-label {
+	position: absolute;
+	right: -50px;
+	bottom: 50%;
+	transform: translate(0, 50%);
+	width: 100px;
+	height: 100px;
+	background: url('images/fire-symbol.png');
+	background-size: contain;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	z-index: 5;
+	transition: opacity 0.2s;
+}
+
+.hot-label span {
+	position: absolute;
+	top: calc(50% + 10px);
+	left: calc(50% - 2px);
+	transform: translate(-50%, -50%);
+}
+
+.tile-friction:hover .hot-label {
+	opacity: 1;
 }
 
 .page {
@@ -490,6 +530,10 @@ img.inline-image-letter {
 	.tile:hover .tile-inner {
 		opacity: 1;
 		transform: translate(-50%, -50%);
+	}
+
+	.hot-label {
+		opacity: 0;
 	}
 
 	.page {

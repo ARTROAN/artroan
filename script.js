@@ -30,7 +30,7 @@ $(document).ready(function() {
 
 	function setRect2x1() {
 		$('.rect-2x1').each(function () {
-			$(this).height($(this).width() / 2)
+			$(this).height($(this).width() / 2);
 		});
 	}
 
