@@ -340,7 +340,9 @@ img.inline-image-letter {
 }
 
 .page .title img {
-	height: 40px;
+	width: 100%;
+	max-width: 150px;
+	margin-bottom: 30px;
 }
 
 .accent {
@@ -350,21 +352,30 @@ img.inline-image-letter {
 }
 
 .lander {
-	background: linear-gradient(#45aaff, #2d74ff);
+	background: linear-gradient(#32dfff, #3381ff);
 }
 
 .lander::before {
-	border-bottom-color: #45aaff;
+	border-bottom-color: #32dfff;
 }
 
 .lander .close-x::before,
 .lander .close-x::after
 {
-	background: #45aaff;
+	background: #32dfff;
 }
 
 .lander a {
 	color: white;
+}
+
+.lander .page-image {
+	width: calc(100% + 80px);
+	margin-left: -40px;
+}
+
+.lander .page-label {
+	font-size: 0.8em;
 }
 
 .portfolio {
@@ -475,14 +486,20 @@ img.inline-image-letter {
 		margin-bottom: 100px;
 	}
 
-	.page .title {
+	.portfolio .title {
 		position: absolute;
 		top: -100px;
 		left: 0;
 	}
 
 	.lander .title {
-		color: #45aaff;
+		color: #32dfff;
+	}
+
+	.lander .title img {
+		height: 100px;
+		width: unset;
+		max-width: unset;
 	}
 
 	.portfolio .title {
