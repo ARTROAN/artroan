@@ -528,6 +528,10 @@ img.inline-image-letter {
 	margin-bottom: 10px;
 }
 
+.upcoming-banner:hover {
+	opacity: 0.8;
+}
+
 .upcoming-aria {
 	background-image: url('images/upcoming-aria-banner.jpg');
 }
