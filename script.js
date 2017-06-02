@@ -57,6 +57,11 @@ $(document).ready(function() {
 		$('.page.portfolio').show();
 	});
 
+	$('.tile-friction').click(function() {
+		$('.header, .container').hide();
+		$('.page.friction').show();
+	});
+
 	//hide loader
 
 	setTimeout(function() {

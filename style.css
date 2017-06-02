@@ -369,7 +369,7 @@ img.inline-image-letter {
 }
 
 .close-x:hover {
-	opacity: 0.8;
+	opacity: 0.5;
 }
 
 .page .title {
@@ -451,6 +451,24 @@ img.inline-image-letter {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
+}
+
+.friction {
+	background: linear-gradient(#2d2d2d, #727272);
+}
+
+.friction::before {
+	border-bottom-color: #2d2d2d;
+}
+
+.friction .close-x::before,
+.friction .close-x::after
+{
+	background: #2d2d2d;
+}
+
+.friction a {
+	color: white;
 }
 
 @media screen and (min-width: 720px) {
