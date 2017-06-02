@@ -500,6 +500,114 @@ img.inline-image-letter {
 	margin-bottom: 0.5em;
 }
 
+.upcoming {
+	padding: 0;
+}
+
+.upcoming .close-x::before,
+.upcoming .close-x::after
+{
+	background: #dc3f51;
+}
+
+.upcoming .title {
+	top: -120px !important;
+	color: #dc3f51;
+	margin-bottom: 50px;
+}
+
+.upcoming a {
+	color: #dc3f51;
+}
+
+.upcoming-banner {
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 10px;
+}
+
+.upcoming-aria {
+	background-image: url('images/upcoming-aria-banner.jpg');
+}
+
+.upcoming-untitled {
+	background-image: url('images/upcoming-untitled-banner.jpg');
+	background-position: 50% 28%;
+}
+
+.upcoming-hd {
+	background-image: url('images/upcoming-hd-banner.jpg');
+}
+
+.upcoming-abc {
+	background-image: url('images/upcoming-abc-banner.jpg');
+}
+
+.upcoming-info {
+	color: rgba(0,0,0,0.33);
+	border: 1px solid rgba(0,0,0,0.33);
+	padding: 50px;
+	margin-top: 30px;
+	margin-bottom: 50px;
+	position: relative;
+	display: none;
+	overflow: unset !important;
+	opacity: 0;
+	transition: opacity 0.2s;
+}
+
+.upcoming-info::before {
+	content: '';
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: -16px;
+	left: 50%;
+	transform: translate(-50%, 0) rotate(45deg);
+	background: white;
+	border: 1px solid rgba(0,0,0,0.33);
+}
+
+.upcoming-info::after {
+	content: '';
+	position: absolute;
+	width: 100px;
+	height: 30px;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background: white;
+}
+
+.date {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	padding: 10px;
+	display: inline-block;
+	text-transform: uppercase;
+	background: #dc3f51;
+	color: white;
+	margin-top: 40px;
+}
+
+.upcoming-title {
+	width: 100%;
+	max-width: 200px;
+	margin-bottom: 30px;
+	z-index: 200;
+}
+
+.upcoming-extra {
+	width: 100%;
+	max-width: 300px;
+}
+
+.no-margin {
+	margin: 0;
+}
+
 @media screen and (min-width: 720px) {
 	.half-height,
 	.full-height
@@ -587,7 +695,9 @@ img.inline-image-letter {
 		margin-bottom: 100px;
 	}
 
-	.portfolio .title {
+	.portfolio .title,
+	.upcoming .title
+	{
 		position: absolute;
 		top: -100px;
 		left: 0;
@@ -611,5 +721,13 @@ img.inline-image-letter {
 		position: absolute;
 		top: 38px;
 		left: 38px;
+	}
+
+	.upcoming .title {
+		width: 0px;
+	}
+
+	.upcoming-banner {
+		height: 200px;
 	}
 }

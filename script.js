@@ -42,24 +42,56 @@ $(document).ready(function() {
 		setRect2x1();
 	});
 
+	function openPage(page) {
+		$('.header, .container').hide();
+		$('.page.'+page).show();
+		$(window).scrollTop(0);
+	}
+
 	$('.close-x').click(function() {
 		$('.page').hide();
 		$('.header, .container').show();
 	});
 
 	$('.tile-lander').click(function() {
-		$('.header, .container').hide();
-		$('.page.lander').show();
+		openPage('lander');
 	});
 
 	$('.tile-portfolio').click(function() {
-		$('.header, .container').hide();
-		$('.page.portfolio').show();
+		openPage('portfolio');
 	});
 
 	$('.tile-friction').click(function() {
-		$('.header, .container').hide();
-		$('.page.friction').show();
+		openPage('friction');
+	});
+
+	$('.tile-upcoming').click(function() {
+		openPage('upcoming');
+	});
+
+	function openInfo(project) {
+		$('.upcoming-info').slideUp(200);
+		$('.upcoming-info').css('opacity', 0);
+		if ($('.upcoming-info-'+project).css('display') === 'none') {
+			$('.upcoming-info-'+project).slideDown(200);
+			$('.upcoming-info-'+project).css('opacity', 1);
+		}
+	};
+
+	$('.upcoming-aria').click(function() {
+		openInfo('aria');
+	});
+
+	$('.upcoming-untitled').click(function() {
+		openInfo('untitled');
+	});
+
+	$('.upcoming-hd').click(function() {
+		openInfo('hd');
+	});
+
+	$('.upcoming-abc').click(function() {
+		openInfo('abc');
 	});
 
 	//hide loader
