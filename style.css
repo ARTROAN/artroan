@@ -171,6 +171,7 @@ body {
 	margin: 0 10px 10px 0;
 	position: relative;
 	color: rgba(0,0,0,0);
+	overflow: hidden;
 }
 
 .tile.rect-2x1 {
@@ -273,13 +274,14 @@ img.inline-image-letter {
 
 .hot-label {
 	position: absolute;
-	right: -50px;
+	right: -35px;
 	bottom: 50%;
 	transform: translate(0, 50%);
-	width: 100px;
+	width: 70px;
 	height: 100px;
 	background: url('images/fire-symbol.png');
-	background-size: contain;
+	background-size: cover;
+	background-position: center;
 	color: white;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
@@ -299,6 +301,17 @@ img.inline-image-letter {
 
 .tile-friction:hover .hot-label {
 	opacity: 1;
+}
+
+.credits {
+	position: absolute;
+	bottom: 35px;
+	right: -75px;
+	height: 50px;
+	line-height: 50px;
+	transform: rotate(90deg);
+	width: 100px;
+	text-align: right;
 }
 
 .page {
@@ -699,6 +712,13 @@ img.inline-image-letter {
 
 	.hot-label {
 		opacity: 0;
+	}
+
+	.credits {
+		height: 100px;
+		line-height: 100px;
+		right: -100px;
+		bottom: 10px;
 	}
 
 	.page {
