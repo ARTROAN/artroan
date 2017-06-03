@@ -612,6 +612,12 @@ img.inline-image-letter {
 	margin: 0;
 }
 
+.cred {
+	font-size: 0.7em;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
 @media screen and (min-width: 720px) {
 	.half-height,
 	.full-height
