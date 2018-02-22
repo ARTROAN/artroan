@@ -256,7 +256,7 @@ img.inline-image-letter {
 }
 
 .tile-upcoming {
-	background-image: url('images/tile-upcoming.jpg');
+	background-image: url('images/tile-upcoming.png');
 }
 
 .tile-shop {
@@ -560,6 +560,14 @@ img.inline-image-letter {
 
 .upcoming-abc {
 	background-image: url('images/upcoming-abc-banner.jpg');
+}
+
+.upcoming-hd2 {
+	background-image: url('images/upcoming-hd2-banner.png');
+}
+
+.upcoming-sunburn {
+	background-image: url('images/upcoming-sunburn-banner.png');
 }
 
 .upcoming-info {

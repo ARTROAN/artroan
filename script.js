@@ -94,6 +94,14 @@ $(document).ready(function() {
 		openInfo('abc');
 	});
 
+	$('.upcoming-hd2').click(function() {
+		openInfo('hd2');
+	});
+
+	$('.upcoming-sunburn').click(function() {
+		openInfo('sunburn');
+	});
+
 	//hide loader
 
 	setTimeout(function() {
