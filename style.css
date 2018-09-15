@@ -555,6 +555,14 @@ img.inline-image-letter {
 	color: #dc3f51;
 }
 
+.upcoming .previous a {
+	color: rgba(0, 0, 0, 0.25);
+	font-family: 'Montserrat';
+	font-weight: 700;
+	text-transform: uppercase;
+	display: block;
+}
+
 .upcoming-banner {
 	width: 100%;
 	height: 100px;
