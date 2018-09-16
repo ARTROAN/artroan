@@ -408,7 +408,12 @@ img.inline-image-letter {
 	text-transform: uppercase;
 }
 
-.page-images,
+.page-images {
+	width: calc(100% + 150px);
+	margin-left: -75px;
+	white-space: nowrap;
+}
+
 .page-labels
 {
 	width: calc(100% + 80px);
@@ -438,7 +443,9 @@ img.inline-image-letter {
 	display: inline-block;
 }
 
-.lander .page-image {
+.lander .page-image,
+.upcoming-info-sunburn .page-image
+{
 	width: 50%;
 	display: inline;
 }
