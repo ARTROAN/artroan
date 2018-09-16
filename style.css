@@ -120,7 +120,8 @@ body {
 
 .links {
 	margin-top: 20px;
-	width: 100%;
+	width: calc(100% + 20px);
+	margin-left: -10px;
 }
 
 .icon-link {
@@ -411,6 +412,9 @@ img.inline-image-letter {
 .page-images {
 	width: calc(100% + 150px);
 	margin-left: -75px;
+}
+
+.page-images.horizontal {
 	white-space: nowrap;
 }
 
@@ -554,6 +558,11 @@ img.inline-image-letter {
 	top: -120px !important;
 	color: #dc3f51;
 	margin-bottom: 50px;
+}
+
+.inline.title {
+	text-align: center;
+	margin-top: 50px;
 }
 
 .upcoming a {
@@ -741,6 +750,7 @@ img.inline-image-letter {
 		bottom: 20px;
 		left: 10px;
 		width: calc(100% - 20px);
+		margin-left: unset;
 	}
 
 	.tile-inner {
@@ -769,8 +779,9 @@ img.inline-image-letter {
 	}
 
 	.portfolio .title,
-	.upcoming .title
+	.upcoming .title:not(.inline)
 	{
+		width: 0px;
 		position: absolute;
 		top: -100px;
 		left: 0;
@@ -794,10 +805,6 @@ img.inline-image-letter {
 		position: absolute;
 		top: 38px;
 		left: 38px;
-	}
-
-	.upcoming .title {
-		width: 0px;
 	}
 
 	.upcoming-banner {
