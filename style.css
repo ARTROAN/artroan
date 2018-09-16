@@ -791,12 +791,6 @@ img.inline-image-letter {
 		color: #3381ff;
 	}
 
-	.lander .title img {
-		height: 100px;
-		width: unset;
-		max-width: unset;
-	}
-
 	.portfolio .title {
 		color: #dc3f51;
 	}
