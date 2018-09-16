@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	var heightBreakpoint;
+	var prevScrollPosition = 0;
 
 	function setMainWidth() {
 		$('.header, .container, .page').css('max-width', $('.container').height() * 8 / 7 +'px');
@@ -14,7 +15,7 @@ $(document).ready(function() {
 	setHeightBreakpoint();
 
 	function setLineColor() {
-		if($(window).scrollTop() > heightBreakpoint) {
+		if($(document).scrollTop() > heightBreakpoint) {
 			$('.header').addClass('breakpoint');
 		}
 		else {
@@ -43,14 +44,16 @@ $(document).ready(function() {
 	});
 
 	function openPage(page) {
+		prevScrollPosition = $(document).scrollTop();
 		$('.header, .container').hide();
 		$('.page.'+page).show();
-		$(window).scrollTop(0);
+		$(document).scrollTop(0);
 	}
 
 	$('.close-x').click(function() {
 		$('.page').hide();
 		$('.header, .container').show();
+		$(document).scrollTop(prevScrollPosition);
 	});
 
 	$('.tile-lander').click(function() {
