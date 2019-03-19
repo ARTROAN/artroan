@@ -64,46 +64,58 @@ $(document).ready(function() {
 		openPage('portfolio');
 	});
 
-	$('.tile-friction').click(function() {
-		openPage('friction');
+	$('.tile-harddrive').click(function() {
+		openPage('harddrive');
 	});
 
-	$('.tile-upcoming').click(function() {
-		openPage('upcoming');
+	$('.tile-comics').click(function() {
+		openPage('comics');
 	});
 
 	function openInfo(project) {
-		$('.upcoming-info').slideUp(200);
-		$('.upcoming-info').css('opacity', 0);
-		if ($('.upcoming-info-'+project).css('display') === 'none') {
-			$('.upcoming-info-'+project).slideDown(200);
-			$('.upcoming-info-'+project).css('opacity', 1);
+		$('.comics-info').slideUp(200);
+		$('.comics-info').css('opacity', 0);
+		if ($('.comics-info-'+project).css('display') === 'none') {
+			$('.comics-info-'+project).slideDown(200);
+			$('.comics-info-'+project).css('opacity', 1);
 		}
 	};
 
-	$('.upcoming-aria').click(function() {
+	$('.comics-aria').click(function() {
 		openInfo('aria');
 	});
 
-	$('.upcoming-untitled').click(function() {
+	$('.comics-untitled').click(function() {
 		openInfo('untitled');
 	});
 
-	$('.upcoming-hd').click(function() {
+	$('.comics-hd').click(function() {
 		openInfo('hd');
 	});
 
-	$('.upcoming-abc').click(function() {
+	$('.comics-abc').click(function() {
 		openInfo('abc');
 	});
 
-	$('.upcoming-hd2').click(function() {
+	$('.comics-hd2').click(function() {
 		openInfo('hd2');
 	});
 
-	$('.upcoming-sunburn').click(function() {
+	$('.comics-sunburn').click(function() {
 		openInfo('sunburn');
 	});
+
+	$('.comics-friction').click(function() {
+		openInfo('friction');
+	})
+
+	$('.comics-dd').click(function() {
+		openInfo('dd');
+	})
+
+	$('.comics-asaan').click(function() {
+		openInfo('asaan');
+	})
 
 	//hide loader
 
