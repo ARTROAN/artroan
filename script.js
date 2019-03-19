@@ -117,6 +117,22 @@ $(document).ready(function() {
 		openInfo('asaan');
 	})
 
+	$('.portfolio-grid-item').each(function(i) {
+		$(this).click(function() {
+			openLightbox(i + 1);
+		});
+	})
+
+	$('.lightbox').click(function() {
+		$('.lightbox').hide();
+	})
+
+	function openLightbox(i) {
+		$('.lightbox img').attr('src', 'images/portfolio/'+i+'-full.jpg');
+		$('.lightbox').css('background-image', 'url(images/portfolio/'+i+'-full.jpg)');
+		$('.lightbox').show();
+	}
+
 	//hide loader
 
 	setTimeout(function() {
