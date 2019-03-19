@@ -507,7 +507,9 @@ img.inline-image-letter {
 	display: block;
 }
 
-.portfolio-grid-item {
+.portfolio .title {
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 .arrow {
@@ -997,5 +999,9 @@ img.inline-image-letter {
 
 	.portfolio-images {
 		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.portfolio .title {
+		margin-top: 0;
 	}
 }
