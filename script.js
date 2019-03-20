@@ -3,7 +3,7 @@ $(document).ready(function() {
 	var prevScrollPosition = 0;
 
 	function setMainWidth() {
-		$('.header, .container, .page').css('max-width', $('.container').height() * 8 / 7 +'px');
+		$('.header, .container, .page').css('max-width', (($(window).height() - 250) * (8 / 7)) +'px');
 	}
 
 	setMainWidth();
@@ -51,9 +51,12 @@ $(document).ready(function() {
 	}
 
 	$('.close-x').click(function() {
+		setMainWidth();
+		setHeightBreakpoint();
 		$('.page').hide();
 		$('.header, .container').show();
 		$(document).scrollTop(prevScrollPosition);
+		setRect2x1();
 	});
 
 	$('.tile-lander').click(function() {
